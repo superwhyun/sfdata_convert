@@ -1,0 +1,462 @@
+--------------[ temperature ]-----------
+[JSON]
+ {
+  "temperature": {
+    "identifier": 105,
+    "type": "sensor",
+    "code": "temperature",
+    "value": 9.81,
+    "unit": "celsius",
+    "precision": 2
+  }
+}
+[Binary]
+ {
+  "identifier": "0x69 ==> 01101001",
+  "type": "0x01 ==> 00000001",
+  "code": "0x01 ==> 00000001",
+  "length": "0x04 ==> 00000100",
+  "value": "0x411cf5c3 ==> 01000001000111001111010111000011",
+  "unit": "0x02 ==> 00000010"
+}
+--------------[ humidity ]-----------
+[JSON]
+ {
+  "humidity": {
+    "identifier": 96,
+    "type": "sensor",
+    "code": "humidity",
+    "value": 94.46,
+    "unit": "percentage",
+    "precision": 2
+  }
+}
+[Binary]
+ {
+  "identifier": "0x60 ==> 01100000",
+  "type": "0x01 ==> 00000001",
+  "code": "0x07 ==> 00000111",
+  "length": "0x04 ==> 00000100",
+  "value": "0x42bceb85 ==> 01000010101111001110101110000101",
+  "unit": "0x04 ==> 00000100"
+}
+--------------[ CO2 ]-----------
+[JSON]
+ {
+  "CO2": {
+    "identifier": 98,
+    "type": "sensor",
+    "code": "CO2",
+    "value": 1521.78,
+    "unit": "ppm",
+    "precision": 2
+  }
+}
+[Binary]
+ {
+  "identifier": "0x62 ==> 01100010",
+  "type": "0x01 ==> 00000001",
+  "code": "0x20 ==> 00100000",
+  "length": "0x04 ==> 00000100",
+  "value": "0x44be38f6 ==> 01000100101111100011100011110110",
+  "unit": "0x05 ==> 00000101"
+}
+--------------[ pyranometer ]-----------
+[JSON]
+ {
+  "pyranometer": {
+    "identifier": 5,
+    "type": "sensor",
+    "code": "pyranometer",
+    "value": 1511.0,
+    "unit": "W/m2",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x05 ==> 00000101",
+  "type": "0x01 ==> 00000001",
+  "code": "0x0b ==> 00001011",
+  "length": "0x04 ==> 00000100",
+  "value": "0x44bce000 ==> 01000100101111001110000000000000",
+  "unit": "0x06 ==> 00000110"
+}
+--------------[ winddirection ]-----------
+[JSON]
+ {
+  "winddirection": {
+    "identifier": 82,
+    "type": "sensor",
+    "code": "winddirection",
+    "value": 179.0,
+    "unit": "degree",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x52 ==> 01010010",
+  "type": "0x01 ==> 00000001",
+  "code": "0x08 ==> 00001000",
+  "length": "0x04 ==> 00000100",
+  "value": "0x43330000 ==> 01000011001100110000000000000000",
+  "unit": "0x07 ==> 00000111"
+}
+--------------[ windspeed ]-----------
+[JSON]
+ {
+  "windspeed": {
+    "identifier": 47,
+    "type": "sensor",
+    "code": "windspeed",
+    "value": 5.0,
+    "unit": "m/s",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x2f ==> 00101111",
+  "type": "0x01 ==> 00000001",
+  "code": "0x09 ==> 00001001",
+  "length": "0x04 ==> 00000100",
+  "value": "0x40a00000 ==> 01000000101000000000000000000000",
+  "unit": "0x08 ==> 00001000"
+}
+--------------[ rain ]-----------
+[JSON]
+ {
+  "rain": {
+    "identifier": 102,
+    "type": "sensor",
+    "code": "rain",
+    "value": 1,
+    "unit": "m/s",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x66 ==> 01100110",
+  "type": "0x01 ==> 00000001",
+  "code": "0x1c ==> 00011100",
+  "length": "0x04 ==> 00000100",
+  "value": "0x00000001 ==> 00000000000000000000000000000001",
+  "unit": "0x08 ==> 00001000"
+}
+--------------[ quantum ]-----------
+[JSON]
+ {
+  "quantum": {
+    "identifier": 97,
+    "type": "sensor",
+    "code": "quantum",
+    "value": 31.0,
+    "unit": "umol/m2s",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x61 ==> 01100001",
+  "type": "0x01 ==> 00000001",
+  "code": "0x10 ==> 00010000",
+  "length": "0x04 ==> 00000100",
+  "value": "0x41f80000 ==> 01000001111110000000000000000000",
+  "unit": "0x09 ==> 00001001"
+}
+--------------[ soilmoisture ]-----------
+[JSON]
+ {
+  "soilmoisture": {
+    "identifier": 23,
+    "type": "sensor",
+    "code": "soilmoisture",
+    "value": 44.0,
+    "unit": "%vol",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x17 ==> 00010111",
+  "type": "0x01 ==> 00000001",
+  "code": "0x1d ==> 00011101",
+  "length": "0x04 ==> 00000100",
+  "value": "0x42300000 ==> 01000010001100000000000000000000",
+  "unit": "0x0a ==> 00001010"
+}
+--------------[ soiltension ]-----------
+[JSON]
+ {
+  "soiltension": {
+    "identifier": 121,
+    "type": "sensor",
+    "code": "soiltension",
+    "value": 36.0,
+    "unit": "kPa",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x79 ==> 01111001",
+  "type": "0x01 ==> 00000001",
+  "code": "0x16 ==> 00010110",
+  "length": "0x04 ==> 00000100",
+  "value": "0x42100000 ==> 01000010000100000000000000000000",
+  "unit": "0x0b ==> 00001011"
+}
+--------------[ EC ]-----------
+[JSON]
+ {
+  "EC": {
+    "identifier": 67,
+    "type": "sensor",
+    "code": "EC",
+    "value": 10.0,
+    "unit": "dS/m",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x43 ==> 01000011",
+  "type": "0x01 ==> 00000001",
+  "code": "0x18 ==> 00011000",
+  "length": "0x04 ==> 00000100",
+  "value": "0x41200000 ==> 01000001001000000000000000000000",
+  "unit": "0x0c ==> 00001100"
+}
+--------------[ PH ]-----------
+[JSON]
+ {
+  "PH": {
+    "identifier": 65,
+    "type": "sensor",
+    "code": "PH",
+    "value": 11.0,
+    "unit": "pH",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x41 ==> 01000001",
+  "type": "0x01 ==> 00000001",
+  "code": "0x19 ==> 00011001",
+  "length": "0x04 ==> 00000100",
+  "value": "0x41300000 ==> 01000001001100000000000000000000",
+  "unit": "0x0d ==> 00001101"
+}
+--------------[ soiltemperature ]-----------
+[JSON]
+ {
+  "soiltemperature": {
+    "identifier": 104,
+    "type": "sensor",
+    "code": "soiltemperature",
+    "value": 55.0,
+    "unit": "celsius",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x68 ==> 01101000",
+  "type": "0x01 ==> 00000001",
+  "code": "0x12 ==> 00010010",
+  "length": "0x04 ==> 00000100",
+  "value": "0x425c0000 ==> 01000010010111000000000000000000",
+  "unit": "0x02 ==> 00000010"
+}
+--------------[ uppermotor ]-----------
+[JSON]
+ {
+  "uppermotor": {
+    "identifier": 126,
+    "type": "actuator",
+    "code": "uppermotor",
+    "value": 1,
+    "unit": "none",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x7e ==> 01111110",
+  "type": "0x02 ==> 00000010",
+  "code": "0x01 ==> 00000001",
+  "length": "0x04 ==> 00000100",
+  "value": "0x00000001 ==> 00000000000000000000000000000001",
+  "unit": "0x00 ==> 00000000"
+}
+--------------[ sidemotor ]-----------
+[JSON]
+ {
+  "sidemotor": {
+    "identifier": 117,
+    "type": "actuator",
+    "code": "sidemotor",
+    "value": 1,
+    "unit": "none",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x75 ==> 01110101",
+  "type": "0x02 ==> 00000010",
+  "code": "0x02 ==> 00000010",
+  "length": "0x04 ==> 00000100",
+  "value": "0x00000001 ==> 00000000000000000000000000000001",
+  "unit": "0x00 ==> 00000000"
+}
+--------------[ warmmotor ]-----------
+[JSON]
+ {
+  "warmmotor": {
+    "identifier": 36,
+    "type": "actuator",
+    "code": "warmmotor",
+    "value": 1,
+    "unit": "none",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x24 ==> 00100100",
+  "type": "0x02 ==> 00000010",
+  "code": "0x0b ==> 00001011",
+  "length": "0x04 ==> 00000100",
+  "value": "0x00000001 ==> 00000000000000000000000000000001",
+  "unit": "0x00 ==> 00000000"
+}
+--------------[ curtainmotor ]-----------
+[JSON]
+ {
+  "curtainmotor": {
+    "identifier": 83,
+    "type": "actuator",
+    "code": "curtainmotor",
+    "value": 1,
+    "unit": "none",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x53 ==> 01010011",
+  "type": "0x02 ==> 00000010",
+  "code": "0x06 ==> 00000110",
+  "length": "0x04 ==> 00000100",
+  "value": "0x00000001 ==> 00000000000000000000000000000001",
+  "unit": "0x00 ==> 00000000"
+}
+--------------[ ventilationfan ]-----------
+[JSON]
+ {
+  "ventilationfan": {
+    "identifier": 74,
+    "type": "actuator",
+    "code": "ventilationfan",
+    "value": 1,
+    "unit": "none",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x4a ==> 01001010",
+  "type": "0x02 ==> 00000010",
+  "code": "0x03 ==> 00000011",
+  "length": "0x04 ==> 00000100",
+  "value": "0x00000001 ==> 00000000000000000000000000000001",
+  "unit": "0x00 ==> 00000000"
+}
+--------------[ circulationfan ]-----------
+[JSON]
+ {
+  "circulationfan": {
+    "identifier": 123,
+    "type": "actuator",
+    "code": "circulationfan",
+    "value": 0,
+    "unit": "none",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x7b ==> 01111011",
+  "type": "0x02 ==> 00000010",
+  "code": "0x0c ==> 00001100",
+  "length": "0x04 ==> 00000100",
+  "value": "0x00000000 ==> 00000000000000000000000000000000",
+  "unit": "0x00 ==> 00000000"
+}
+--------------[ irrigationpump ]-----------
+[JSON]
+ {
+  "irrigationpump": {
+    "identifier": 109,
+    "type": "actuator",
+    "code": "irrigationpump",
+    "value": 0,
+    "unit": "none",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x6d ==> 01101101",
+  "type": "0x02 ==> 00000010",
+  "code": "0x08 ==> 00001000",
+  "length": "0x04 ==> 00000100",
+  "value": "0x00000000 ==> 00000000000000000000000000000000",
+  "unit": "0x00 ==> 00000000"
+}
+--------------[ irrigationvalve ]-----------
+[JSON]
+ {
+  "irrigationvalve": {
+    "identifier": 48,
+    "type": "actuator",
+    "code": "irrigationvalve",
+    "value": 1,
+    "unit": "none",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x30 ==> 00110000",
+  "type": "0x02 ==> 00000010",
+  "code": "0x0d ==> 00001101",
+  "length": "0x04 ==> 00000100",
+  "value": "0x00000001 ==> 00000000000000000000000000000001",
+  "unit": "0x00 ==> 00000000"
+}
+--------------[ coolingheater ]-----------
+[JSON]
+ {
+  "coolingheater": {
+    "identifier": 13,
+    "type": "actuator",
+    "code": "coolingheater",
+    "value": 1,
+    "unit": "none",
+    "precision": 0
+  }
+}
+[Binary]
+ {
+  "identifier": "0x0d ==> 00001101",
+  "type": "0x02 ==> 00000010",
+  "code": "0x04 ==> 00000100",
+  "length": "0x04 ==> 00000100",
+  "value": "0x00000001 ==> 00000000000000000000000000000001",
+  "unit": "0x00 ==> 00000000"
+}

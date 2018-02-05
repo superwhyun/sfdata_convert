@@ -1,0 +1,677 @@
+
+# 온도	-20~80	C	1	32	float / unsigned  long int
+# 습도	0~100	%	7	32	float / unsigned  long int
+# CO2	0-3000	ppm	17	32	float / unsigned  long int
+# 일사	0-2000	W/m2	11	32	float / unsigned  long int
+# 풍향	0-360	o(방향각)	8	32	float / unsigned  long int
+# 풍속	0~40	m/s	9	32	float / unsigned  long int
+# 감우	on/off		28	16	unsigned  int
+# 광양자	0-2000	umol/m2s	16	32	float / unsigned  long int
+# 토양함수율	0~50	% vol.	29	32	float / unsigned  long int
+# 토양수분장력	0~100	kPa	22	32	float / unsigned  long int
+# EC	0-10	dS/m	24	32	float / unsigned  long int
+# PH	2~12	pH	25	32	float / unsigned  long int
+# 지온	-20~80	oC	18	32	float / unsigned  long int
+
+
+# 천창	상(열림):0x00,하(닫힘):0x01	1	16	unsigned int
+# 측창	상(열림):0x00,하(닫힘):0x01	2	16	unsigned  int
+# 보온재	상(열림):0x00,하(닫힘):0x01	11	16	unsigned  int
+# 커튼	상(열림):0x00,하(닫힘):0x01	6	16	unsigned  int
+# 환풍기	ON(작동): 0x02,  OFF(정지): 0x03	3	16	unsigned  int
+# 유동팬	ON(작동): 0x02,  OFF(정지): 0x03	12	16	unsigned  int
+# 관수모터	ON(작동): 0x02,  OFF(정지): 0x03	8	16	unsigned  int
+# 관수밸브	ON(작동): 0x02,  OFF(정지): 0x03	13	16	unsigned  int
+# 냉난방기	ON(작동): 0x02,  OFF(정지): 0x03	4	16	unsigned  int
+
+
+
+##########################
+# 온도
+##########################
+temperature:
+  type : sensor  
+  code : temperature
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 2     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : -20        
+        # 최소치
+    max : 80         
+        # 최대치
+    unit : "celsius"
+
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1
+
+
+##########################
+# 습도
+##########################
+humidity:
+  type : sensor  
+      # sensor, actuator
+  code : humidity
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 2     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0       
+        # 최소치
+    max : 100         
+        # 최대치
+    unit : "percentage"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1
+
+
+
+
+##########################
+# CO2
+##########################
+CO2:
+  type : sensor  
+      # sensor, actuator
+  code : CO2
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 2     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0       
+        # 최소치
+    max : 3000        
+        # 최대치
+    unit : "ppm"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1
+
+
+
+##########################
+# 일사
+##########################
+pyranometer:
+  type : sensor  
+      # sensor, actuator
+  code : pyranometer
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0       
+        # 최소치
+    max : 2000        
+        # 최대치
+    unit : "W/m2"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+##########################
+# 풍향
+##########################
+winddirection:
+  type : sensor  
+      # sensor, actuator
+  code : winddirection
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0       
+        # 최소치
+    max : 360        
+        # 최대치
+    unit : "degree"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+##########################
+# 풍속
+##########################
+windspeed:
+  type : sensor  
+      # sensor, actuator
+  code : windspeed
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0       
+        # 최소치
+    max : 40       
+        # 최대치
+    unit : "m/s"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+##########################
+# 감우
+##########################
+rain:
+  type : sensor  
+      # sensor, actuator
+  code : rain
+  value:
+    type : 1          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0       
+        # 최소치
+    max : 1       
+        # 최대치
+    unit : "m/s"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+##########################
+# 광양자
+##########################
+quantum:
+  type : sensor  
+      # sensor, actuator
+  code : quantum
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0       
+        # 최소치
+    max : 2000      
+        # 최대치
+    unit : "umol/m2s"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+##########################
+# 토양함수율
+##########################
+soilmoisture:
+  type : sensor  
+      # sensor, actuator
+  code : soilmoisture
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0       
+        # 최소치
+    max : 50      
+        # 최대치
+    unit : "%vol"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+##########################
+# 토양수분장력
+##########################
+soiltension:
+  type : sensor  
+      # sensor, actuator
+  code : soiltension
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0       
+        # 최소치
+    max : 100      
+        # 최대치
+    unit : "kPa"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+##########################
+# EC
+##########################
+EC:
+  type : sensor  
+      # sensor, actuator
+  code : EC
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0       
+        # 최소치
+    max : 10      
+        # 최대치
+    unit : "dS/m"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+##########################
+# PH
+##########################
+PH:
+  type : sensor  
+      # sensor, actuator
+  code : PH
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 2      
+        # 최소치
+    max : 12     
+        # 최대치
+    unit : "pH"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+##########################
+# 지온
+##########################
+soiltemperature:
+  type : sensor  
+      # sensor, actuator
+  code : soiltemperature
+  value:
+    type : 3          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : -20      
+        # 최소치
+    max : 80     
+        # 최대치
+    unit : "celsius"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+
+
+
+
+##########################
+# 천창
+##########################
+uppermotor:
+  type : actuator  
+      # sensor, actuator
+  code : uppermotor
+  value:
+    type : 1          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0      
+        # 최소치
+    max : 1    
+        # 최대치
+    unit : "none"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+
+
+
+
+
+##########################
+# 측창
+##########################
+sidemotor:
+  type : actuator  
+      # sensor, actuator
+  code : sidemotor
+  value:
+    type : 1          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0      
+        # 최소치
+    max : 1    
+        # 최대치
+    unit : "none"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+##########################
+# 보온재
+##########################
+warmmotor:
+  type : actuator  
+      # sensor, actuator
+  code : warmmotor
+  value:
+    type : 1          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0      
+        # 최소치
+    max : 1    
+        # 최대치
+    unit : "none"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+ 
+
+##########################
+# 커튼
+##########################
+curtainmotor:
+  type : actuator  
+      # sensor, actuator
+  code : curtainmotor
+  value:
+    type : 1          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0      
+        # 최소치
+    max : 1    
+        # 최대치
+    unit : "none"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+##########################
+# 환풍기
+##########################
+ventilationfan:
+  type : actuator  
+      # sensor, actuator
+  code : ventilationfan
+  value:
+    type : 1          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0      
+        # 최소치
+    max : 1    
+        # 최대치
+    unit : "none"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+
+##########################
+# 유동팬
+##########################
+circulationfan:
+  type : actuator  
+      # sensor, actuator
+  code : circulationfan
+  value:
+    type : 1          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0      
+        # 최소치
+    max : 1    
+        # 최대치
+    unit : "none"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+
+##########################
+# 관수모터
+##########################
+irrigationpump:
+  type : actuator  
+      # sensor, actuator
+  code : irrigationpump
+  value:
+    type : 1          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0      
+        # 최소치
+    max : 1    
+        # 최대치
+    unit : "none"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1    
+
+
+##########################
+# 관수밸브
+##########################
+irrigationvalve:
+  type : actuator  
+      # sensor, actuator
+  code : irrigationvalve
+  value:
+    type : 1          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0      
+        # 최소치
+    max : 1    
+        # 최대치
+    unit : "none"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1        
+
+
+##########################
+# 냉난방기
+##########################
+coolingheater:
+  type : actuator  
+      # sensor, actuator
+  code : coolingheater
+  value:
+    type : 1          
+        # 1:int, 2:uint, 3:float, 4:ulong
+    precision : 0     
+        # 소수점 이하 반올림 자리 수
+        # value type이 3인 경우에만 유효
+    multiple : false   
+        # 복수 value 지원 여부
+    min : 0      
+        # 최소치
+    max : 1    
+        # 최대치
+    unit : "none"
+  binary : 
+    identifier : 1
+    type : 1
+    code : 1
+    length : 1
+    value : 4
+    unit : 1            
