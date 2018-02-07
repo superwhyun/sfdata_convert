@@ -106,8 +106,6 @@ def gen_bitstring(val, len):
 def gen_binary_values(conf, dval):
     D = dict()
 
-    print(conf)
-    print(dval)
     D["device_identifier"] = gen_bitstring(dval["device_identifier"], conf["device_identifier"])
     D["device_class"] = gen_bitstring(role2type_dic[dval["device_class"]], conf["device_class"])
     D["device_type"] = gen_bitstring(func2code_dic[dval["device_type"]], conf["device_type"])
