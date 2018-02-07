@@ -73,7 +73,7 @@ def gen_rand_values(conf, dtype, device_identifier):
         device_identifier = random.randint(0, 127)
 
     data=conf[dtype]
-    if(data["value"]["type"] != 3):
+    if(data["value"]["valuetype"] != 2):
         value = random.randint(data["value"]["min"], data["value"]["max"])
     else:
         value = random.uniform(data["value"]["min"], data["value"]["max"])
@@ -84,6 +84,7 @@ def gen_rand_values(conf, dtype, device_identifier):
     D1['device_identifier']=device_identifier
     D1['device_class']=data["device_class"]
     D1['device_type']=data["device_type"]
+    D1['valuetype']=data["value"]["valuetype"]
     D1['value']=value
     D1['unit']=data["value"]["unit"]
     D1['precision']=data["value"]["precision"]
@@ -106,10 +107,12 @@ def gen_bitstring(val, len):
 def gen_binary_values(conf, dval):
     D = dict()
 
+
     D["device_identifier"] = gen_bitstring(dval["device_identifier"], conf["device_identifier"])
     D["device_class"] = gen_bitstring(role2type_dic[dval["device_class"]], conf["device_class"])
     D["device_type"] = gen_bitstring(func2code_dic[dval["device_type"]], conf["device_type"])
     D["length"] = gen_bitstring(conf["value"], conf["length"])
+    D["valuetype"] = gen_bitstring(dval["valuetype"], conf["valuetype"])
     D["value"] = gen_bitstring(dval["value"], conf["value"])
     D["unit"] = gen_bitstring(unit2code_dic[dval["unit"]], conf["unit"])
 
