@@ -63,14 +63,14 @@ unit2code_dic = {
     "pH":13
 }
 
-def gen_rand_values(conf, dtype, identifier):
+def gen_rand_values(conf, dtype, device_identifier):
 
     if(conf is None):
         print("error: argument error")
         return
     
-    if(identifier ==-1):
-        identifier = random.randint(0, 127)
+    if(device_identifier ==-1):
+        device_identifier = random.randint(0, 127)
 
     data=conf[dtype]
     if(data["value"]["type"] != 3):
@@ -81,9 +81,9 @@ def gen_rand_values(conf, dtype, identifier):
 
     D = dict()
     D1 = dict()
-    D1['identifier']=identifier
-    D1['type']=data["type"]
-    D1['code']=data["code"]
+    D1['device_identifier']=device_identifier
+    D1['device_class']=data["device_class"]
+    D1['device_type']=data["device_type"]
     D1['value']=value
     D1['unit']=data["value"]["unit"]
     D1['precision']=data["value"]["precision"]
@@ -106,9 +106,11 @@ def gen_bitstring(val, len):
 def gen_binary_values(conf, dval):
     D = dict()
 
-    D["identifier"] = gen_bitstring(dval["identifier"], conf["identifier"])
-    D["type"] = gen_bitstring(role2type_dic[dval["type"]], conf["type"])
-    D["code"] = gen_bitstring(func2code_dic[dval["code"]], conf["code"])
+    print(conf)
+    print(dval)
+    D["device_identifier"] = gen_bitstring(dval["device_identifier"], conf["device_identifier"])
+    D["device_class"] = gen_bitstring(role2type_dic[dval["device_class"]], conf["device_class"])
+    D["device_type"] = gen_bitstring(func2code_dic[dval["device_type"]], conf["device_type"])
     D["length"] = gen_bitstring(conf["value"], conf["length"])
     D["value"] = gen_bitstring(dval["value"], conf["value"])
     D["unit"] = gen_bitstring(unit2code_dic[dval["unit"]], conf["unit"])

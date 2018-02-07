@@ -30,8 +30,8 @@
 # 온도
 ##########################
 temperature:
-  type : sensor  
-  code : temperature
+  device_class : sensor  
+  device_type : temperature
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -47,9 +47,9 @@ temperature:
     unit : "celsius"
 
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1
@@ -59,9 +59,9 @@ temperature:
 # 습도
 ##########################
 humidity:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : humidity
+  device_type : humidity
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -76,9 +76,9 @@ humidity:
         # 최대치
     unit : "percentage"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1
@@ -90,9 +90,9 @@ humidity:
 # CO2
 ##########################
 CO2:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : CO2
+  device_type : CO2
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -107,9 +107,9 @@ CO2:
         # 최대치
     unit : "ppm"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1
@@ -120,9 +120,9 @@ CO2:
 # 일사
 ##########################
 pyranometer:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : pyranometer
+  device_type : pyranometer
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -137,9 +137,9 @@ pyranometer:
         # 최대치
     unit : "W/m2"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -149,9 +149,9 @@ pyranometer:
 # 풍향
 ##########################
 winddirection:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : winddirection
+  device_type : winddirection
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -166,9 +166,9 @@ winddirection:
         # 최대치
     unit : "degree"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -178,9 +178,9 @@ winddirection:
 # 풍속
 ##########################
 windspeed:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : windspeed
+  device_type : windspeed
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -195,9 +195,9 @@ windspeed:
         # 최대치
     unit : "m/s"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -206,9 +206,9 @@ windspeed:
 # 감우
 ##########################
 rain:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : rain
+  device_type : rain
   value:
     type : 1          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -223,9 +223,9 @@ rain:
         # 최대치
     unit : "m/s"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -235,9 +235,9 @@ rain:
 # 광양자
 ##########################
 quantum:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : quantum
+  device_type : quantum
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -252,9 +252,9 @@ quantum:
         # 최대치
     unit : "umol/m2s"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -264,9 +264,9 @@ quantum:
 # 토양함수율
 ##########################
 soilmoisture:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : soilmoisture
+  device_type : soilmoisture
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -281,9 +281,9 @@ soilmoisture:
         # 최대치
     unit : "%vol"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -293,9 +293,9 @@ soilmoisture:
 # 토양수분장력
 ##########################
 soiltension:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : soiltension
+  device_type : soiltension
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -310,9 +310,9 @@ soiltension:
         # 최대치
     unit : "kPa"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -322,9 +322,9 @@ soiltension:
 # EC
 ##########################
 EC:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : EC
+  device_type : EC
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -339,9 +339,9 @@ EC:
         # 최대치
     unit : "dS/m"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -350,9 +350,9 @@ EC:
 # PH
 ##########################
 PH:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : PH
+  device_type : PH
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -367,9 +367,9 @@ PH:
         # 최대치
     unit : "pH"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -379,9 +379,9 @@ PH:
 # 지온
 ##########################
 soiltemperature:
-  type : sensor  
+  device_class : sensor  
       # sensor, actuator
-  code : soiltemperature
+  device_type : soiltemperature
   value:
     type : 3          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -396,9 +396,9 @@ soiltemperature:
         # 최대치
     unit : "celsius"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -412,9 +412,9 @@ soiltemperature:
 # 천창
 ##########################
 uppermotor:
-  type : actuator  
+  device_class : actuator  
       # sensor, actuator
-  code : uppermotor
+  device_type : uppermotor
   value:
     type : 1          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -429,9 +429,9 @@ uppermotor:
         # 최대치
     unit : "none"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -446,9 +446,9 @@ uppermotor:
 # 측창
 ##########################
 sidemotor:
-  type : actuator  
+  device_class : actuator  
       # sensor, actuator
-  code : sidemotor
+  device_type : sidemotor
   value:
     type : 1          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -463,9 +463,9 @@ sidemotor:
         # 최대치
     unit : "none"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -475,9 +475,9 @@ sidemotor:
 # 보온재
 ##########################
 warmmotor:
-  type : actuator  
+  device_class : actuator  
       # sensor, actuator
-  code : warmmotor
+  device_type : warmmotor
   value:
     type : 1          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -492,9 +492,9 @@ warmmotor:
         # 최대치
     unit : "none"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -505,9 +505,9 @@ warmmotor:
 # 커튼
 ##########################
 curtainmotor:
-  type : actuator  
+  device_class : actuator  
       # sensor, actuator
-  code : curtainmotor
+  device_type : curtainmotor
   value:
     type : 1          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -522,9 +522,9 @@ curtainmotor:
         # 최대치
     unit : "none"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -534,9 +534,9 @@ curtainmotor:
 # 환풍기
 ##########################
 ventilationfan:
-  type : actuator  
+  device_class : actuator  
       # sensor, actuator
-  code : ventilationfan
+  device_type : ventilationfan
   value:
     type : 1          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -551,9 +551,9 @@ ventilationfan:
         # 최대치
     unit : "none"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -564,9 +564,9 @@ ventilationfan:
 # 유동팬
 ##########################
 circulationfan:
-  type : actuator  
+  device_class : actuator  
       # sensor, actuator
-  code : circulationfan
+  device_type : circulationfan
   value:
     type : 1          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -581,9 +581,9 @@ circulationfan:
         # 최대치
     unit : "none"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -594,9 +594,9 @@ circulationfan:
 # 관수모터
 ##########################
 irrigationpump:
-  type : actuator  
+  device_class : actuator  
       # sensor, actuator
-  code : irrigationpump
+  device_type : irrigationpump
   value:
     type : 1          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -611,9 +611,9 @@ irrigationpump:
         # 최대치
     unit : "none"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1    
@@ -623,9 +623,9 @@ irrigationpump:
 # 관수밸브
 ##########################
 irrigationvalve:
-  type : actuator  
+  device_class : actuator  
       # sensor, actuator
-  code : irrigationvalve
+  device_type : irrigationvalve
   value:
     type : 1          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -640,9 +640,9 @@ irrigationvalve:
         # 최대치
     unit : "none"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1        
@@ -652,9 +652,9 @@ irrigationvalve:
 # 냉난방기
 ##########################
 coolingheater:
-  type : actuator  
+  device_class : actuator  
       # sensor, actuator
-  code : coolingheater
+  device_type : coolingheater
   value:
     type : 1          
         # 1:int, 2:uint, 3:float, 4:ulong
@@ -669,9 +669,9 @@ coolingheater:
         # 최대치
     unit : "none"
   binary : 
-    identifier : 1
-    type : 1
-    code : 1
+    device_identifier : 1
+    device_class : 1
+    device_type : 1
     length : 1
     value : 4
     unit : 1            
