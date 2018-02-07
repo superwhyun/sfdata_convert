@@ -4,8 +4,8 @@ import bitstring
 
 
 role2type_dic = {
-    "sensor":1,
-    "actuator":2
+    "sensor":0,
+    "actuator":1
 }
 
 func2code_dic = {
