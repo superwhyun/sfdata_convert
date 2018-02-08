@@ -50,10 +50,10 @@ temperature:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1    
     value : 4
     unit : 1
+    precision: 1
 
 
 ##########################
@@ -80,10 +80,10 @@ humidity:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
     valuetype : 1
     value : 4
     unit : 1
+    precision: 1
 
 
 
@@ -112,10 +112,10 @@ CO2:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1      
     value : 4
     unit : 1
+    precision: 1
 
 
 
@@ -143,10 +143,10 @@ pyranometer:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1    
+    valuetype : 1      
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -173,10 +173,10 @@ winddirection:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1       
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -203,10 +203,10 @@ windspeed:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1       
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 ##########################
 # 감우
@@ -232,10 +232,10 @@ rain:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1      
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -262,10 +262,10 @@ quantum:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1      
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -292,10 +292,10 @@ soilmoisture:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1      
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -322,10 +322,10 @@ soiltension:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1      
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -352,10 +352,11 @@ EC:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
     valuetype : 1
+        
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 ##########################
 # PH
@@ -381,10 +382,10 @@ PH:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1     
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -411,10 +412,10 @@ soiltemperature:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1      
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 
@@ -445,10 +446,10 @@ uppermotor:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1     
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 
@@ -480,10 +481,10 @@ sidemotor:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1     
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -510,10 +511,10 @@ warmmotor:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1    
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
  
 
@@ -541,10 +542,10 @@ curtainmotor:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1     
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -571,10 +572,10 @@ ventilationfan:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1      
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 
@@ -602,10 +603,10 @@ circulationfan:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1    
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 
@@ -633,10 +634,10 @@ irrigationpump:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1    
     value : 4
-    unit : 1    
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -663,10 +664,10 @@ irrigationvalve:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1    
     value : 4
-    unit : 1        
+    unit : 1
+    precision: 1
 
 
 ##########################
@@ -693,7 +694,7 @@ coolingheater:
     device_identifier : 1
     device_class : 1
     device_type : 1
-    length : 1
-    valuetype : 1
+    valuetype : 1    
     value : 4
-    unit : 1            
+    unit : 1
+    precision: 1

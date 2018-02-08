@@ -108,15 +108,25 @@ def gen_binary_values(conf, dval):
     D = dict()
 
 
+    # D["device_identifier"] = gen_bitstring(dval["device_identifier"], conf["device_identifier"])
+    # D["device_class"] = gen_bitstring(role2type_dic[dval["device_class"]], conf["device_class"])
+    # D["device_type"] = gen_bitstring(func2code_dic[dval["device_type"]], conf["device_type"])
+    # D["length"] = gen_bitstring(conf["value"], conf["length"])
+    # D["valuetype"] = gen_bitstring(dval["valuetype"], conf["valuetype"])
+    # D["value"] = gen_bitstring(dval["value"], conf["value"])
+    # D["unit"] = gen_bitstring(unit2code_dic[dval["unit"]], conf["unit"])
+
+
+
     D["device_identifier"] = gen_bitstring(dval["device_identifier"], conf["device_identifier"])
     D["device_class"] = gen_bitstring(role2type_dic[dval["device_class"]], conf["device_class"])
     D["device_type"] = gen_bitstring(func2code_dic[dval["device_type"]], conf["device_type"])
-    D["length"] = gen_bitstring(conf["value"], conf["length"])
     D["valuetype"] = gen_bitstring(dval["valuetype"], conf["valuetype"])
+    # D["valuelength"] = gen_bitstring(conf["value"], conf["valuelength"])
     D["value"] = gen_bitstring(dval["value"], conf["value"])
     D["unit"] = gen_bitstring(unit2code_dic[dval["unit"]], conf["unit"])
-
-
+    D["precision"] = gen_bitstring(dval["precision"], conf["precision"])
+    
     # TLV 파라미터가 필요한 경우 (drafting...)
     # attr_cnt=0
     # for attr in conf["attr"]:
